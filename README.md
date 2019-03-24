@@ -9,22 +9,24 @@ This should run all the test cases, and returns a Build success.
 
 mvn jetty:run
 This should start they jetty server, and our services become active after jetty successfully starts. 
-#Note:- There is a jar package warning thrown while starting up jetty, please ignore them, I think its due to the jetty version and that jetty doesn't support JARS, so I have done a work around for jetty to start they jetty by including the below in pom.xml
+
+Note:- There is a jar package warning thrown while starting up jetty, please ignore them, I think its due to the jetty version and that jetty doesn't support JARS, so I have done a work around for jetty to start they jetty by including the below in pom.xml
 
 <supportedPackagings>
     <supportedPackaging>jar</supportedPackaging>
 </supportedPackagings>
+
 
 #How to access the application
 In the web.xml, I have made the URLS to contain the pattern "/webapi" and the TransformersResource URL is set as "/myresource".
 
 #CRUD Operations of the GAME
 So to access the application, Please use:-
-To see all the Transformers :- localhost:8080/webapi/myresource/all
-To see only autobots transformers :- localhost:8080/webapi/myresource/autobots
-To see only decepticons transformers :- localhost:8080/webapi/myresource/decepticons
-To see a particular autobot or a decepticon transformers :- http://localhost:8080/webapi/myresource/{transformerId}
-To add a transformer:- localhost:8080/webapi/myresource/ 
+#To see all the Transformers :- localhost:8080/webapi/myresource/all
+#To see only autobots transformers :- localhost:8080/webapi/myresource/autobots
+#To see only decepticons transformers :- localhost:8080/webapi/myresource/decepticons
+#To see a particular autobot or a decepticon transformers :- http://localhost:8080/webapi/myresource/{transformerId}
+#To add a transformer:- localhost:8080/webapi/myresource/ 
 POST Request with Transformer Object in raw body:-
 {
         "courage": 10,
@@ -40,7 +42,7 @@ POST Request with Transformer Object in raw body:-
         "type": "Autobots"
     }
     
-To Update a transformer:- localhost:8080/webapi/myresource/{transformerId}
+#To Update a transformer:- localhost:8080/webapi/myresource/{transformerId}
 Put Request with transformerId to Update and the transformerObject in raw body.
 
 {
@@ -57,7 +59,7 @@ Put Request with transformerId to Update and the transformerObject in raw body.
         "type": "Decepticons"
     }
     
-To Delete a transformer:- localhost:8080/webapi/myresource/{transformerId}
+#To Delete a transformer:- localhost:8080/webapi/myresource/{transformerId}
 DELETE Request with transformerId to DELETE
 
 
