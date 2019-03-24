@@ -1,0 +1,6 @@
+com\learningAssesment\App.class
+com\transformers\context\TransformersContext.class
+com\transformers\service\TransformersService.class
+com\transformers\model\Transformers.class
+com\transformers\resources\TransformersResource.class
+com\transformers\database\DatabaseClass.class
