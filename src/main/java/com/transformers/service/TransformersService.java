@@ -96,9 +96,9 @@ public class TransformersService {
 	}
 
 	public List<String> startFight() {
+		Collections.sort(getAllTransformers());
 		List<Transformers> autoBotListTransformers = getAllAutobotsTransformers();
 		List<Transformers> decepticonsTransformers = getAllDecepticonsTransformers();
-		Collections.sort(getAllTransformers());
 		 if(autoBotListTransformers.size() > decepticonsTransformers.size()){
 			autoBotListTransformers = autoBotListTransformers.subList(0, autoBotListTransformers.size()-1);
 			System.out.println("autoBotListTransformers size has become : "+autoBotListTransformers.size());
