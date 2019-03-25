@@ -98,14 +98,7 @@ public class TransformersService {
 	public List<String> startFight() {
 		List<Transformers> autoBotListTransformers = getAllAutobotsTransformers();
 		List<Transformers> decepticonsTransformers = getAllDecepticonsTransformers();
-		Collections.sort(autoBotListTransformers);
-		for(Transformers t : autoBotListTransformers){
-			System.out.println("autoBotListTransformers are ranked with : "+t.getRank());
-		}
-		Collections.sort(decepticonsTransformers);
-		for(Transformers t : decepticonsTransformers){
-			System.out.println("decepticonsTransformers are ranked with : "+t.getRank());
-		}
+		Collections.sort(getAllTransformers());
 		 if(autoBotListTransformers.size() > decepticonsTransformers.size()){
 			autoBotListTransformers = autoBotListTransformers.subList(0, autoBotListTransformers.size()-1);
 			System.out.println("autoBotListTransformers size has become : "+autoBotListTransformers.size());
