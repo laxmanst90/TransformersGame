@@ -71,6 +71,9 @@ If accessing the above url from a tool like postman, please make sure the Conten
 #Things to consider while playing the game
 I have included 3 transformers in the servletContext, so on server startup there will be three transformers(2 autobots and 1 decepticon) added.
 
+If you have to access the above resources in post man, please make sure Content-Type is 'application/json'.
+If you have to access localhost:8080/webapi/myresource/fight, please make sure you access it by setting the content-type as 'text/plain'.
+
 
 
 
